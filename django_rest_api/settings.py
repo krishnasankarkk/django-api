@@ -98,13 +98,24 @@ WSGI_APPLICATION = 'django_rest_api.wsgi.application'
 # }
 
 # Mysql setup.
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'django-api',
+#         'USER':'root',
+#         'PASSWORD':'',
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django-api',
-        'USER':'root',
-        'PASSWORD':'',
-        'PORT': '3306',
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'instagram',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',  # Set to the hostname where your database is running, typically 'localhost'.
+        'PORT': '5433',  # Leave empty to use the default PostgreSQL port (5432).
     }
 }
 
