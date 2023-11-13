@@ -13,6 +13,10 @@ from .models import UserAccount
 from .serializers import UserModelSerializer
 
 @api_view(['GET'])
+def home(request):
+    return Response("Django REST Api working perfectly :)")
+
+@api_view(['GET'])
 def UserView(request):
     user_details = User.objects.all()
     serialized_data = UserModelSerializer(user_details, many=True)
