@@ -112,14 +112,24 @@ WSGI_APPLICATION = 'django_rest_api.wsgi.app'
 #     }
 # }
 
+# DATABASES = {
+#    'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'instagram',
+#         'USER': 'postgres',
+#         'PASSWORD': '1234',
+#         'HOST': 'localhost',  # Set to the hostname where your database is running, typically 'localhost'.
+#         'PORT': '5433',  # Leave empty to use the default PostgreSQL port (5432).
+#     }
+# }
 DATABASES = {
-   'default': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'instagram',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',  # Set to the hostname where your database is running, typically 'localhost'.
-        'PORT': '5433',  # Leave empty to use the default PostgreSQL port (5432).
+        'PASSWORD': '8thmGiEv9t1mhPlcbBOZ',
+        'HOST': 'containers-us-west-90.railway.app',  # Set to the hostname where your database is running, typically 'localhost'.
+        'PORT': '6943',  # Leave empty to use the default PostgreSQL port (5432).
     }
 }
 
