@@ -19,16 +19,16 @@ def UserView(request):
     
     return Response(serialized_data.data)
         
-# @api_view(['POST'])
-# def CreateUser(request):
-#     user_name = request.data['user_name']
-#     password = request.data['password']
-#     if UserModel.objects.filter(name=user_name).exists():
-#         return Response('User name already exists', status=status.HTTP_404_NOT_FOUND)
-#     else:
-#         user = UserModel(name=user_name, password=password)
-#         user.save()
-#         return Response('User created successfully', status=200)
+@api_view(['POST'])
+def CreateUser(request):
+    user_name = request.data['user_name']
+    password = request.data['password']
+    if UserAccount.objects.filter(name=user_name).exists():
+        return Response('User name already exists', status=status.HTTP_404_NOT_FOUND)
+    else:
+        user = UserAccount(name=user_name, password=password)
+        user.save()
+        return Response('User created successfully', status=200)
 
 # @api_view(['GET'])
 # def GetUser(request):

@@ -12,7 +12,7 @@ router.register(r'user', views.UserView, basename='user')
 # specify URL Path for rest_framework
 urlpatterns = [
     path('get-all-user', views.UserView, name="get_all_users"),
-    # path('create-user', views.CreateUser, name="create_user"),
+    path('create-user', views.CreateUser, name="create_user"),
     # path('get-user', views.GetUser, name="get_users"),
     path('api-auth/', include('rest_framework.urls'))
 ]
